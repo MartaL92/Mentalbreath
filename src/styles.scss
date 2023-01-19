@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+a, a:link, a:active, a:visited {
+  color: #815e5d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c4d7db
+}
+
+.btn {
+  border: 1px solid #815e5d;
+  color: #815e5d
+}
+
+.exit {
+  color: #c4d7db;
+  background-color: #815e5d;
+}

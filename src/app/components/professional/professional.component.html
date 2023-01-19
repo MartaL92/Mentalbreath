@@ -1,0 +1,87 @@
+<div>
+  <button type="button" class="btn m-3" routerLink="/home"> <i class="bi bi-arrow-left m-1"></i>
+    Home
+  </button>
+</div>
+
+<div class="container align-items-center my-3">
+  <div class="card m-3" style="max-width: 100%;">
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-4">
+        <img src="https://picsum.photos/150/200" class="card-img-top">
+      </div>
+      <div class="col-lg-8">
+        <div class="card-body">
+          <h5 class="card-title">Ciao {{prof.name}}</h5>
+          <button type="submit" class="btn exit m-2" (click)="deleteUser(prof.id)">Elimina profilo</button>
+          <div class="row justify-content-center">
+            <div class="col-6">
+              <form (ngSubmit)="change()" #fEdit="ngForm">
+                <label for="name">Nome</label>
+                <input type="text" id="name" [(ngModel)]="prof.name" name="name" class="form-control" required
+                  #name="ngModel">
+                <p *ngIf="name.invalid && name.touched"><strong>Campo obbligatorio
+                  </strong></p>
+                <label for="surname">Cognome</label>
+                <input type="surname" id="surname" [(ngModel)]="prof.surname" name="surname" class="form-control"
+                  required #surname="ngModel">
+                <p *ngIf="surname.invalid && surname.touched"><strong>Campo obbligatorio
+                  </strong></p>
+                <label for="email">Email</label>
+                <input type="email" id="email" [(ngModel)]="prof.email" name="email" class="form-control" required
+                  #email="ngModel">
+                <p *ngIf="email.invalid && email.touched"><strong>Campo obbligatorio
+                  </strong></p>
+                <label for="address">Indirizzo professionale</label>
+                <input type="address" id="address" [(ngModel)]="prof.address" name="address" class="form-control"
+                  required #address="ngModel">
+                <p *ngIf="address.invalid && address.touched"><strong>Campo obbligatorio
+                  </strong></p>
+                <label for="order">Ordine degli psicologi e numbero di iscrizione</label>
+                <input type="order" id="order" [(ngModel)]="prof.order" name="order" class="form-control" required
+                  #order="ngModel">
+                <p *ngIf="order.invalid && order.touched"><strong>Campo obbligatorio
+                  </strong></p>
+                <label for="link">Link a pagina professionale</label>
+                <input type="link" id="link" [(ngModel)]="prof.link" name="link" class="form-control" required
+                  #link="ngModel">
+                <p *ngIf="link.invalid && link.touched"><strong>Campo obbligatorio
+                  </strong></p>
+                <label for="description">Descrizione dell'attività svolta</label>
+                <input type="description" id="description" [(ngModel)]="prof.description" name="description"
+                  class="form-control" required #description="ngModel">
+                <p *ngIf="description.invalid && description.touched"><strong>Campo obbligatorio
+                  </strong></p>
+                <button type="submit" class="btn m-2" [disabled]="fEdit.invalid">Modifica i dati</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <div class="row">
+    <h1>Gruppi Creati</h1>
+    <div class="col-md g-3" *ngFor="let group of groups; index as i">
+      <div class="card" style="width: 18rem;">
+        <img src="https://picsum.photos/200" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{group.title}}</h5>
+          <p class="card-text">{{group.theme}}</p>
+          <p class="card-text">Città: <a href="{{group.place}}" target="_blank"
+              title="Cerca su Google Maps">{{group.city}}</a></p>
+          <p class="card-text">Data di inizio: {{group.start | date: 'dd-MM-yyyy'}}</p>
+          <p class="card-text">Max utenti: {{group.nrUsers}}</p>
+          <button type="button" class="btn m-2" routerLink="/detailG/{{group.id}}">Scopri di più</button>
+          <button type="button" class="btn exit m-2" (click)="delete(group.id, i)">Elimina
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

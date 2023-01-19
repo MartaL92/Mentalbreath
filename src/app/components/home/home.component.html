@@ -1,0 +1,38 @@
+<div class="card text-bg-dark">
+  <img src="..\..\..\assets\images\groups.jpg" class="card-img">
+  <div class="card-img-overlay">
+    <h5 class="card-title">Mental Breath</h5>
+    <p class="card-text">Cerca il gruppo di auto-mutuo-aiuto che ti interessa e connettiti con chi ti sta intorno!</p>
+  </div>
+</div>
+
+<div class="container-fluid mt-5 mb-5">
+  <h1>Lista Gruppi</h1>
+  <div class="container-fluid">
+    <div class="container-fluid search">
+      <form class="d-flex" role="search">
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+          placeholder="Cerca gruppo">
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container m-5">
+  <div class="row">
+    <div class="col-md g-3" *ngFor="let group of groups | filter:searchText">
+      <div class="card" style="width: 18rem;">
+        <img src="..\..\..\assets\images\groups.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{group.title}}</h5>
+          <p class="card-text">{{group.theme}}</p>
+          <p class="card-text">Città: <a href="{{group.place}}" target="_blank"
+              title="Cerca su Google Maps">{{group.city}}</a></p>
+          <p class="card-text">Data di inizio: {{group.start | date: 'dd-MM-yyyy'}}</p>
+          <p class="card-text">Max utenti: {{group.nrUsers}}</p>
+          <button type="button" class="btn m-2" routerLink="/detailG/{{group.id}}">Scopri di più</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div>
+  <button type="button" class="btn m-3" routerLink="/home"> <i class="bi bi-arrow-left m-1"></i>
+    Home
+  </button>
+</div>
+
+<div class="container align-items-center my-3">
+  <div class="card m-3" style="max-width: 100%;">
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-4">
+        <img src="https://picsum.photos/150/200" class="card-img-top">
+      </div>
+      <div class="col-lg-8">
+        <div class="card-body">
+          <h5 class="card-title">{{group.title}}</h5>
+              <p class="card-text">Tema: {{group.theme}}</p>
+              <p class="card-text">Città: {{group.city}}</p>
+              <p><a href="{{group.place}}" target="_blank">Indirizzo su Google Maps</a></p>
+              <p class="card-text">Data di inizio: {{group.start | date: 'dd-MM-yyyy'}}</p>
+              <p class="card-text">Max utenti: {{counter}}/{{group.nrUsers}}</p>
+              <p class="card-text">Professionista facilitatore: <a routerLink="/detailP/{{prof.id}}" target="_blank">{{prof.name}}
+                 {{prof.surname}}</a></p>
+              <p class="card-text">Descrizione: {{group.description}}</p>
+              <button *ngIf="userRole == 'Utente' && this.exist == false && this.counter < group.nrUsers" type="button" class="btn m-2" (click)="join()">Iscriviti</button>
+              <button *ngIf="userRole == 'Utente' && this.exist == true" type="button" class="btn m-2" (click)="join()">Disiscriviti</button>        </div>
+      </div>
+    </div>
+  </div>
+</div>

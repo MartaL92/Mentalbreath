@@ -1,0 +1,60 @@
+<div>
+  <button type="button" class="btn m-3" routerLink="/home"> <i class="bi bi-arrow-left m-1"></i>
+    Home
+  </button>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-6">
+    <form [formGroup]="formS" (ngSubmit)="submit()">
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input name="name" class="form-control" type="text" id="nameS" formControlName="name" required />
+        <span *ngIf="getControl('name')?.invalid && getControl('name')?.touched" class="text-danger">
+          <ng-container *ngIf="getError('name', 'required')">Inserisci il tuo nome</ng-container>
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="surname">Cognome</label>
+        <input name="surname" class="form-control" type="text" id="surnameS" formControlName="surname" required />
+        <span *ngIf="getControl('surname')?.invalid && getControl('surname')?.touched" class="text-danger">
+          <ng-container *ngIf="getError('surname', 'required')">Inserisci il tuo cognome</ng-container>
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input name="email" class="form-control" type="email" id="emailS" formControlName="email" />
+        <span *ngIf="getControl('email')?.invalid && getControl('email')?.touched" class="text-danger">
+          <ng-container *ngIf="getError('email', 'required')">Email obbligatoria</ng-container>
+          <ng-container *ngIf="getError('email', 'email')">Formato email non consentito</ng-container>
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input name="password" class="form-control" type="password" id="passwordS" formControlName="password" />
+        <span *ngIf="getControl('password')?.invalid && getControl('password')?.touched" class="text-danger">
+          <ng-container *ngIf="getError('password', 'required')">Password obbligatoria</ng-container>
+          <ng-container *ngIf="getError('password', 'minLength')">La password deve contenere almeno 6
+            caratteri</ng-container>
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="role">Tipo di profilo</label>
+        <select name="role" class="form-select" formControlName="role" required>
+          <option>Professionista</option>
+          <option>Utente</option>
+        </select>
+        <span *ngIf="getControl('role')?.invalid && getControl('role')?.touched" class="text-danger">
+          <ng-container *ngIf="getError('role', 'required')">Seleziona il tipo di profilo</ng-container>
+        </span>
+      </div>
+      <button class="btn mt-3" type="submit" [disabled]="formS.invalid">
+        Registrati
+      </button>
+    </form>
+  </div>
+</div>
+
+<div>
+  <button class="btn m-3" [routerLink]="['/login']" routerLinkActive="active">Login</button>
+</div>

@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "email": "ml@gmail.com",
+      "password": "$2a$10$vRWNOrx6A1F.6/xi8pJLsey8qbsKBzdKsSa4abjDspw9rocZD/qvy",
+      "name": "Marta",
+      "surname": "Liguori",
+      "role": "Professionista",
+      "id": 1,
+      "description": "Attività di consulenza svolta principalmente in centri di salute mentale",
+      "address": "Via Mattine, Agropoli (SA)",
+      "order": "Milano - 20581",
+      "link": "https://www.linkedin.com/in/martaliguori1992/"
+    },
+    {
+      "email": "pd@gmail.com",
+      "password": "$2a$10$m8q7W/LPz3isTG8uFO0B/eNHvEi0Imt/YDW8vZQ0lhC/ZDwBiw7gu",
+      "name": "Paola",
+      "surname": "Dago",
+      "role": "Utente",
+      "id": 2,
+      "groupsID": [
+        "2",
+        "1"
+      ]
+    },
+    {
+      "email": "md@gmail.com",
+      "password": "$2a$10$4HSuOt945YNC1wumHdWRyOUawYA6G6eMQywFE0inwk3hk/XO09NSG",
+      "name": "Maria",
+      "surname": "Dece",
+      "role": "Utente",
+      "id": 3,
+      "groupsID": [
+        "2"
+      ]
+    },
+    {
+      "email": "ll@gmail.com",
+      "password": "$2a$10$REydD7NULKFPmWbIyMYcwufNYZ03oiIZ1wpykSuQAITIDiWCvgB2e",
+      "name": "Lorenzo",
+      "surname": "Liguori",
+      "role": "Professionista",
+      "id": 4,
+      "address": "Via Mattine, Agropoli (SA)",
+      "order": "Milano - 20581",
+      "link": "https://www.linkedin.com/in/martaliguori1992/",
+      "description": "Attività di counseling"
+    }
+  ]
+}
