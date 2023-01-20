@@ -17,7 +17,7 @@ Componenti e dettagli:
   -	Crea Gruppo: componente con un template driven form visibile solo al professionista che deve aggiungere tutti i dettagli richiesti, tra cui anche un link di Google maps per l’indirizzo dove si terranno gli incontri, con un button che fa una post dei valori del form su mockapi creando così il gruppo specifico.
   -	Profilo: profilo privato del professionista con tutti i suoi dettagli, composto da un template driven form i cui input sono popolati dai valori già salvati dal professionista, modificabili attraverso una chiamata http, e da una lista che recupera i gruppi creati da quel singolo professionista in base al suo id. Sono inoltre presenti due button: uno per eliminare l’intero profilo dell’user, uno per eliminare un singolo gruppo creato.
 
-Profilo Utente
+- Profilo Utente
   -	Profilo: profilo privato dell’utente con tutti i suoi dettagli, composto da un template driven form i cui input sono popolati dai valori già salvati dal professionista, modificabili attraverso una chiamata http, e da una lista che recupera i gruppi a cui si è iscritto quel singolo utente: nello specifico, recupera gli id dei gruppi salvati nell’array dell’utente e fa la get di quegli id, inserendoli poi in un array locale per visualizzarli in ciclo sull’html. È inoltre presente un button per eliminare l’intero profilo dell’user.
 
 
