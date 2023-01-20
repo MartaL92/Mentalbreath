@@ -24,7 +24,6 @@ export class ConsumerComponent implements OnInit {
 
   ngOnInit(): void {
     this.readCons();
-    this.getMyJoin();
   }
 
   readCons(){
@@ -43,12 +42,6 @@ export class ConsumerComponent implements OnInit {
       })
     }
     );
-  }
-
-  getMyJoin() {
-    this.groupSrv.getMyGroup().subscribe((res) => {
-      this.groups = res;
-    })
   }
 
   change() {

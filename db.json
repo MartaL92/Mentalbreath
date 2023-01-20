@@ -16,12 +16,13 @@
       "email": "pd@gmail.com",
       "password": "$2a$10$m8q7W/LPz3isTG8uFO0B/eNHvEi0Imt/YDW8vZQ0lhC/ZDwBiw7gu",
       "name": "Paola",
-      "surname": "Dago",
+      "surname": "Dagosti",
       "role": "Utente",
       "id": 2,
       "groupsID": [
         "2",
-        "1"
+        "1",
+        "3"
       ]
     },
     {

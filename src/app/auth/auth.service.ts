@@ -2,8 +2,8 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { JwtHelperService } from "@auth0/angular-jwt";
-import { BehaviorSubject, Subject, throwError } from "rxjs";
-import { catchError, map, tap } from "rxjs/operators";
+import { BehaviorSubject} from "rxjs";
+import { map, tap } from "rxjs/operators";
 import { AuthData, Signup } from "./auth";
 
 @Injectable({

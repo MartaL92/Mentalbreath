@@ -17,33 +17,31 @@ import { DetailProfessionalComponent } from './components/detail-professional/de
 import { AuthModule } from './auth/auth.module';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        NavbarComponent,
-        LandingComponent,
-        HomeComponent,
-        ConsumerComponent,
-        ProfessionalComponent,
-        NewGroupComponent,
-        DetailGroupComponent,
-        DetailProfessionalComponent,
-        LoginComponent,
-        SignupComponent,
-        ModalComponent
-                ],
-    providers: [],
-    bootstrap: [AppComponent],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        AuthModule,
-        FormsModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-        Ng2SearchPipeModule
-         ]
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    LandingComponent,
+    HomeComponent,
+    ConsumerComponent,
+    ProfessionalComponent,
+    NewGroupComponent,
+    DetailGroupComponent,
+    DetailProfessionalComponent,
+    LoginComponent,
+    SignupComponent
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    AuthModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    Ng2SearchPipeModule
+  ]
 })
 export class AppModule { }
