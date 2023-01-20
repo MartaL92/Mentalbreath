@@ -5,8 +5,8 @@ Sito per professionisti e utenti della salute mentale, in cui il professionista 
 Componenti e dettagli:
 
 -	Landing page: con possibilità di login e registrazione, componenti accessibili attraverso i button sulla navbar o i link presenti nelle diverse sezioni del body della pagina:
-  -	Registrazione: componente con reactive form con validators sugli input, in particolare email e password, che permette di recuperare gli input e restituire un testo di errore nel caso in cui mancassero dei dati, di tipo submit che rimanda a una funzione collegata al signup dell’auth.service che invia i dati registrati con post su json locale
-  -	Login:
+  -	Registrazione: componente con reactive form con validators sugli input, in particolare email e password, che permette di recuperare gli input e restituire un testo di errore nel caso in cui mancassero dei dati, di tipo submit che rimanda a una funzione collegata al signup dell’auth.service che invia i dati registrati con post su json locale.
+  -	Login: login con email e password, che permette di recuperare i dati dell'utente loggato inserendoli anche in localstorage, come id e role registrato (quindi utente o professionista), permettendo così di visualizzare solo i componenti accessibili grazie all'auth.guard e in base al ruolo stesso.
 
 - Pagine visibili con login:
   -	Home: pagina principale, con la lista dei gruppi creati dai professionisti, ottenuta attraverso una get su mockapi di tutti i gruppi presenti, ciclati su html con ngFor. È presente anche un input per filtrare i risultati in base al testo di ricerca inserito, attraverso il modulo Ng2SearchPipeModule. Per ogni gruppo è possibile raggiungere la sua pagina di dettaglio attraverso il button che recupera l’id del gruppo selezionato.
